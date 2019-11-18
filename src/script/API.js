@@ -25,22 +25,6 @@ export class Api {
     }
   }
 
-  /**
-   * Можно улучшить
-   * 
-   * .then(res => {
-    if (res.ok) {
-      return res.json();
-    }
-
-    // если ошибка, переходим в catch
-    return Promise.reject(`Ошибка: ${res.status}`);
-  }).catch((err) => {
-    console.log(err); // выведем ошибку в консоль
-  });
-   */
-  
-
   createInfo() {
     return fetch(`${this.url}/users/me`, {
       method: 'PATCH',

@@ -1,3 +1,6 @@
+import {PopupBigImage} from "./OpenBigImage.js";
+import {popupBigImage} from "./OpenBigImage.js";
+
 export class Card {
     constructor(name, link) {
       this.CardElement = this.create(name, link);
@@ -39,7 +42,6 @@ export class Card {
         blockcardImage.addEventListener('click', () => { // большая картинка
           popupBigImage.applyImage(linkValue);        
           popupBigImage.open();
-          
       });
         return cardImage;
     }

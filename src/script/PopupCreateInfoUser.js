@@ -94,7 +94,6 @@ export class PopupInfo extends Popup {
         popupCreate.classList.remove('popup_is-opened');
         popupAdd.setAttribute('disabled', true);
       popupAdd.classList.remove('popup__button_active');
-      popup.classList.remove('popup_is-opened');
     });
   }
 
