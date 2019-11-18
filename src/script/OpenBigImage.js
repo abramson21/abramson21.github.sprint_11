@@ -13,4 +13,4 @@ export class PopupBigImage extends Popup {
      }
 
      const container = document.querySelector('.big-image');
-     const popupBigImage = new PopupBigImage(container);
+     export const popupBigImage = new PopupBigImage(container);

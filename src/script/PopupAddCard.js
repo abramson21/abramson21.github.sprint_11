@@ -7,13 +7,13 @@ const startName = popup.querySelector('.popup__input_type_name');
 const linkText = document.forms.newForm.elements.link.value;
 const linkTextLength = linkText.length;
 const popupClose = document.querySelector('.popup__close');
-
+const popupCreate = document.querySelector('.popupCreatInfo');
 
 const chekInfoFirst = popup.querySelector('.chek__open_first');
 const chekInfoSecond = popup.querySelector('.chek__open_second');
 const startLink = document.querySelector('.popup__input_type_link-url');
 
-export class PopupAddCard extends Popup {
+class PopupAddCard extends Popup {
     constructor (container, button) {
       super(container, button);
       this.form = this.container
@@ -58,14 +58,14 @@ export class PopupAddCard extends Popup {
           return false;
         }
     }
-  
+  const buttonAddCard = popup.querySelector('.button');
     newForm.addEventListener('input', event => {
       if (startNameRev() === true && startLinkRev() === true) {
-      console.log(startLinkRev());
-      console.log(" получили true");
-      popupAdd.removeAttribute('disabled', true);
-      popupAdd.classList.add('popup__button_active');
-      popupAdd.classList.remove('popup__button');
+        console.log(startLinkRev());
+        console.log(" получили true");
+        buttonAddCard.removeAttribute('disabled', true);
+        buttonAddCard.classList.add('popup__button_active');
+        buttonAddCard.classList.remove('popup__button');
       }
       else {
         console.log('получили false');
@@ -77,8 +77,6 @@ export class PopupAddCard extends Popup {
       this.form.querySelector('.popup__button').setAttribute('disabled', true);
     }
   }
-  
-  
   const popupPleaceCard = document.querySelector('.popup');
   const popupPleaceButtonCard = document.querySelector('.button');
   const popupPleaceClass = new PopupAddCard(popupPleaceCard, popupPleaceButtonCard);
